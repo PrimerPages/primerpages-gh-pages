@@ -1,37 +1,52 @@
-# GitHub Pages Remote Theme Demo
+---
+layout: profile
+posts_limit: 3
+---
 
-This is a demo repository showcasing how to use a **remote theme** with [GitHub Pages](https://pages.github.com/). Remote themes make it easy to apply and maintain a consistent look and feel across multiple Jekyll sites.
+# PrimerPages theme Github Pages Branch Deploy Template
 
-## Live Demo
+Use this template when you want the standard GitHub Pages flow: **Deploy from a branch**.
 
-View the live site: [https://primerpages.github.io/github-pages-demo/](https://primerpages.github.io/github-pages-demo/)
+## Contributing
 
-## What This Repo Demonstrates
+This template is maintained in `primerpages-dev`.
 
-- Using a `remote_theme` in a Jekyll site hosted on GitHub Pages
-- Simple structure for GitHub Pages projects
-- How to override theme defaults with custom content
+- Source repo: `PrimerPages/primerpages-dev`
+- Please open issues and pull requests there, not in the generated template repository.
 
-## Setup
+## What This Template Is For
 
-To create your own site using a remote theme:
+- `remote_theme: PrimerPages/jekyll-theme-profile` in `_config.yml`
+- A starter site structure (`index.md`, `blog/`, `tags/`, docs, and sample posts)
+- A setup that works with GitHub Pages branch publishing
 
-1. Create a new GitHub repository.
-2. Add the following to your `_config.yml`:
+## Quick Setup
 
-   ```yaml
-   remote_theme: PrimerPages/jekyll-theme-profile@githubpages
-   ```
+1. Create a new repository from this template.
+2. Update `_config.yml`:
+   - `title`
+   - `description`
+   - `repository` (set to `OWNER/REPO`)
+3. Commit and push to your default branch.
+4. In GitHub, go to `Settings -> Pages`.
+5. Under `Build and deployment`, set:
+   - `Source`: `Deploy from a branch`
+   - `Branch`: usually `main`
+   - `Folder`: `/(root)` (or `/docs` if you intentionally publish from docs)
+6. Save and wait for the first deployment.
 
-3. Create an `index.md` or `index.html` with your content.
-4. Commit and push your changes.
-5. Enable GitHub Pages in your repo settings.
+## Important Notes
 
-## Notes
+- Branch publishing supports only branch + folder as source (`/(root)` or `/docs`).
+- Commits made by workflows using `GITHUB_TOKEN` do **not** trigger Pages branch builds.
+- If you need custom build behavior, switch Pages source to `GitHub Actions`.
 
-- GitHub Pages supports remote themes that are compatible with a [certain set](https://pages.github.com/versions/) of plugins. `jekyll-theme-profile` is one of them.
-- For other supported themes, see the [GitHub Pages Themes](https://github.com/topics/github-pages-theme) topic.
+## Verify It Works
 
-## License
+- Visit `https://<owner>.github.io/<repo>/` for project pages.
+- Confirm this home page renders and nav links work.
+- Open `/debug` to inspect the active Jekyll/theme info.
 
-This project is licensed under the [MIT License](LICENSE).
+## Reference
+
+- GitHub Docs: [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)

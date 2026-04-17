@@ -1,4 +1,3 @@
-vendor/
-.jekyll-cache/
-_site/
-.ruby-lsp/
+vendor
+.jekyll-cache
+_site

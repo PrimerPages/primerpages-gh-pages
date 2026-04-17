@@ -4,7 +4,7 @@ order: 1
 image: "https://raw.githubusercontent.com/PrimerPages/jekyll-theme-profile/main/screenshot.png"
 ---
 
-This theme is based on GitHub's primer style. It supports both light and dark modes, and four style options: [appbar](../appbar.md), [sidebar](../sidebar.md), [stacked](../stacked.md), and [topbar](../topbar.md),.
+This theme is based on GitHub's primer style. It supports both light and dark modes, and four style options: appbar, sidebar, stacked, and topbar.
 
 ![jekyll-theme-profile](https://raw.githubusercontent.com/PrimerPages/jekyll-theme-profile/main/screenshot.png)
 
@@ -40,8 +40,6 @@ repo_info: true # Show the information for the source of this project
 user_metadata: true # Show the metadata associated with the user
 profile_link: true # Show a link to the github profile for the user
 ```
-
-Or you can start with a [sample config](https://github.com/PrimerPages/jekyll-theme-profile/blob/main/demo/_config.yml) that you can copy and customize.
 
 ## Building
 
